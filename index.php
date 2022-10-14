@@ -9,6 +9,8 @@ $datiConnessione = array(
     'nomeDB' => 'blog'
 
 
+
+
 );
 $sql = "select matricola,nome,cognome from giornalista order by cognome";
 $dati = estraiDati($datiConnessione, $sql);
