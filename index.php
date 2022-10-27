@@ -29,46 +29,44 @@ $dati = estraiDati($datiConnessione, $sql);
 <div class="container">
 
     <form action="modifica.php" method="post">
-    <div class="row my-4">
-        <div class="col-3">
-            <h2> Scegli un giornalista </h2>
+        <div class="row my-4">
+            <div class="col-3">
+                <h2> Scegli un giornalista </h2>
 
+            </div>
+            <div class="col-3">
+
+
+                <?= disegnaSelect("selectGiornalista", $dati) ?>
+
+            </div>
+
+            <div class="col-3">
+
+
+                <button class="form-control btn-primary" type="submit"> Modifica</button>
+
+            </div>
         </div>
-        <div class="col-3">
-
-
-            <?= disegnaSelect("selectGiornalista", $dati) ?>
-
-        </div>
-
-        <div class="col-3">
-
-
-            <button class="form-control btn-primary" type="submit" > Modifica</button>
-
-        </div>
-    </div>
 
     </form>
 
 
+    <form method="post" action="nuovoAutore.php">
+        <div class="col-3">
 
 
-<form method="post" action="nuovoAutore.php">
-    <div class="col-3">
+            <button class="form-control btn-success" type="submit"> Inserisci</button>
 
-
-        <button class="form-control btn-success" type="submit" > Inserisci</button>
-
-    </div>
-</form>
+        </div>
+    </form>
 
 
     <form method="post" action="elimina.php">
         <div class="col-3">
 
 
-            <button class="form-control btn-danger" type="submit" > Elimina</button>
+            <button class="form-control btn-danger" type="submit"> Elimina</button>
 
         </div>
     </form>
